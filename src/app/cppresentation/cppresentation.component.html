@@ -1,0 +1,9 @@
+<p>cppresentation works!</p>
+<div class="card">
+  <img [src]="user.imageUrl" class="card-img-top" alt="Image utilisateur">
+  <div class="card-body">
+	<h5 class="card-title">{{ user.name }}</h5>
+	<p class="card-text">{{ user.email }}</p>
+	<button class="btn btn-primary" (click)="onContact()">Contacter</button>
+  </div>
+</div>
