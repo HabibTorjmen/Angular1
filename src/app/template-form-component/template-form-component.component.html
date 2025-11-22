@@ -1,0 +1,20 @@
+<p>template-form-component works!</p>
+<h2>Template-driven Form</h2>
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+  <label for="name">Name:</label>
+  <input id="name" name="name" ngModel required />
+  <div *ngIf="myform.controls['name']?.invalid && myform.controls['name']?.touched ">
+    Name is required.
+  </div>
+  <label for="email">Email:</label>
+  <input id="email" name="email" ngModel required email />
+  <div *ngIf="myform.controls['email']?.touched && myform.controls['email']?.invalid">
+    Valid email is required.
+  </div>
+ <label for="age">age:</label>
+    <input id="age" name="age" ngModel required type="number" min="18" />
+    <div *ngIf="myform.controls['age']?.touched && myform.controls['age']?.invalid">
+      Age must be at least 18.
+    </div>
+  <button type="submit" [disabled]="myform.invalid">Submit</button>
+</form>

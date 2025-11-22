@@ -3,16 +3,24 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-cp-directive',
   templateUrl: './cp-directive.component.html',
-  styleUrls: ['./cp-directive.component.css']
+  styleUrl: './cp-directive.component.css'
 })
 export class CpDirectiveComponent {
-
-}
-
-export class DirectivesDemoComponent {
+  isVisible = true;
+  fruits = ['Pomme', 'Banane', 'Orange', 'Mangue'];
+  
+  toggleVisibility(){
+  this.isVisible = !this.isVisible;
+  }
   isHighlighted = false;
-
   toggleHighlight() {
     this.isHighlighted = !this.isHighlighted;
   }
+
+  Meteo: any;
+  changerMeteo() {
+    const options = ['soleil', 'pluie'];
+    const randomIndex = Math.floor(Math.random() * options.length);
+    this.Meteo = options[randomIndex];
+  }
 }

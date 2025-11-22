@@ -1,10 +1,14 @@
-<h1>{{ habib }}</h1>  <!-- Display the string variable -->
+<h1>{{ habib}}</h1>  <!-- Display the string variable -->
+<h1>Angular Forms Navigation</h1>
 
 
 
-<app-cp1></app-cp1>
-<app-cppresentation></app-cppresentation>
-<app-cp-pipe></app-cp-pipe>
-<h3> Utilisation de la pipe personnalisée 'capitalize'</h3>
-<p>{{ 'bonjour tout le monde' | capitalize }}</p>
-<p appHighlightDirective>Survolez-moi pour voir l'effet de la directive personnalisée!</p>
+<nav>
+    <ul>
+        <li><a routerLink="/template-form">Template Driven Form</a></li>
+        <li><a routerLink="/reactive-form">Reactive Form</a></li>
+    </ul>
+</nav>  
+<router-outlet></router-outlet>
+ 
+        

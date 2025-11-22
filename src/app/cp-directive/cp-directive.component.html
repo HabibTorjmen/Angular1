@@ -1,2 +1,24 @@
+<h3>Directives structurelles</h3>
+<p *ngIf="isVisible">Ce texte est visible uniquement si <code> isVisible</code> est vrai.</p>
+<button (click)="toggleVisibility()">Basculer visibilité</button>
+<h4> Liste des fruits</h4>
+<ul>
+<li *ngFor="let fruit of fruits"> {{ fruit }}</li>
+</ul>
+
+
+
 
 <h3> Directives d'attribut</h3>
+<p [ngClass]="{'highlight': isHighlighted }">Ce texte change de style selon
+<code>isHighlighted</code>.</p>
+<button (click)="toggleHighlight()">Basculer surbrillance</button>
+<p [ngStyle]=" {'color': isHighlighted ? 'green' : 'black' }">
+Ce texte change de couleur selon <code> isHighlighted</code>.
+</p>
+
+<div [ngSwitch]="Meteo">
+  <p *ngSwitchCase="'soleil'">Il fait beau aujourd'hui !</p>
+  <p *ngSwitchCase="'pluie'">N'oubliez pas votre parapluie.</p>
+</div>
+<button (click)="changerMeteo()">Changer météo</button>

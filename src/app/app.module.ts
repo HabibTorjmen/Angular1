@@ -9,7 +9,10 @@ import { CpPipeComponent } from './cp-pipe/cp-pipe.component';
 import { CapitalizePipe } from './capitalize.pipe';
 import { CpDirectiveComponent } from './cp-directive/cp-directive.component';
 import { HighlightDirective } from './highlight-directive.directive';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReactifformComponent } from './reactifform/reactifform.component';
+import { FormsModule } from '@angular/forms';
+import { TemplateFormComponentComponent } from './template-form-component/template-form-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +21,18 @@ import { HighlightDirective } from './highlight-directive.directive';
     CpPipeComponent,
     CapitalizePipe,
     CpDirectiveComponent,
-    HighlightDirective
+    HighlightDirective,
+    ReactifformComponent,
+    TemplateFormComponentComponent,
+    
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
